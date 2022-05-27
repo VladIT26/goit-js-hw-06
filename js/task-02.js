@@ -1,11 +1,3 @@
-//Напиши скрипт, который для каждого элемента массива ingredients:
-
-//Создаст отдельный элемент <li>. Обзательно используй метод 
-//document.createElement().
-//Добавит название ингредиента как его текстовое содержимое.
-//Добавит элементу класс item.
-//После чего вставит все <li> за одну операцию в список ul.ingredients.
-
 const ingredients = [
   'Potatoes',
   'Mushrooms',
@@ -15,15 +7,15 @@ const ingredients = [
   'Condiments',
 ];
 
-const listItem = document.querySelector('#ingredients');
+const listOfItems = document.querySelector('#ingredients');
 
 const makeListItem = ingredients.map(element => {
-  const itemElement = document.createElement("li");
-  itemElement.classList.add("item");
-  itemElement.textContent = element;
-  return itemElement;
+  const liElement = document.createElement("li");
+  liElement.classList.add("item");
+  liElement.textContent = element;
+  return liElement;
 })
-listItem.append(...makeListItem)
+listOfItems.append(...makeListItem)
 
   
 
